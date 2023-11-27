@@ -1,0 +1,17 @@
+$media: (
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px,
+    2xl: 1440px,
+    3xl: 1920px,
+);
+
+// Define a mixin for media queries using the breakpoints
+@mixin respond-to($breakpoint, $type: min) {
+  $breakpoint-value: map-get($media, $breakpoint);
+
+  @media only screen and (#{$type}-width: $breakpoint-value) {
+    @content;
+  }
+}

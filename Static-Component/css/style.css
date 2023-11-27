@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.hero {
+  background-color: #EDEDED;
+  position: relative;
+  margin-top: 65px;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100%;
+  top: 150px;
+  left: 0;
+  background-image: url(../images/bg-images/small-left.png);
+  width: 61px;
+  height: 476px;
+}
+@media only screen and (min-width: 768px) {
+  .hero::before {
+    background-image: url(../images/bg-images/large-left.png);
+    width: 180px;
+    height: 222px;
+    top: 45px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .hero::before {
+    background-image: url(../images/bg-images/large-left.png);
+    width: 218px;
+    height: 270px;
+    top: 45px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero::before {
+    background-image: url(../images/bg-images/xl-left.png);
+    width: 418px;
+    height: 283px;
+    top: 45px;
+  }
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 100%;
+  right: 0;
+  top: 150px;
+  background-image: url(../images/bg-images/small-right.png);
+  width: 127px;
+  height: 467px;
+}
+@media only screen and (min-width: 768px) {
+  .hero::after {
+    background-image: url(../images/bg-images/medium-right.png);
+    width: 134px;
+    height: 177px;
+    top: 45px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .hero::after {
+    background-image: url(../images/bg-images/large-right.png);
+    width: 270px;
+    height: 235px;
+    top: 45px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero::after {
+    background-image: url(../images/bg-images/xl-right.png);
+    width: 418px;
+    height: 283px;
+    top: 45px;
+  }
+}
+.hero .head {
+  position: relative;
+}
+.hero .head::before {
+  content: "";
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  top: -60px;
+  width: 100%;
+  height: 105px;
+}
+@media only screen and (max-width: 768px) {
+  .hero .head::before {
+    height: 210px;
+  }
+}
+.hero .head .badges {
+  width: 100%;
+  max-width: 880px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 38px;
+}
+@media only screen and (max-width: 1024px) {
+  .hero .head .badges {
+    gap: 28px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero .head .badges {
+    max-width: 440px;
+  }
+}
+.hero .head .badges img {
+  width: 70px;
+  z-index: 1;
+}
+.hero .content {
+  padding: 0 0 65px 0;
+}
+@media only screen and (max-width: 768px) {
+  .hero .content {
+    padding: 0 0 110px 0;
+  }
+}
+.hero .content h1 {
+  text-align: center;
+  font-size: 37px;
+  margin: 25px 0 0 0;
+  letter-spacing: 0.1px;
+  color: #1A1A1A;
+  font-weight: 600;
+}
+@media only screen and (max-width: 768px) {
+  .hero .content h1 {
+    max-width: 360px;
+    margin: auto;
+    padding-top: 32px;
+    font-size: 44px;
+  }
+}
+.hero .content p {
+  text-align: center;
+  margin: 13px 0 0 0;
+  font-size: 14px;
+}
+@media only screen and (max-width: 768px) {
+  .hero .content p {
+    font-size: 20px;
+  }
+}
+.hero .content .action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 300px;
+  gap: 5px;
+  margin: 30px auto 0 auto;
+}
+@media only screen and (max-width: 768px) {
+  .hero .content .action {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    max-width: 360px;
+  }
+}
+.hero .content .action .btn {
+  padding: 10px 29px;
+  border-radius: 8px;
+  border: 0;
+  color: #ffffff;
+  max-height: 36px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .hero .content .action .btn {
+    font-size: 18px;
+    max-height: 100%;
+    padding: 16px 29px;
+  }
+}
+.hero .content .action .btn:hover {
+  opacity: 0.8;
+}
+.hero .content .action .free-trial-wrap {
+  max-width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .hero .content .action .free-trial-wrap {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+.hero .content .action .free-trial-wrap .free-trial {
+  background: #FF176B;
+}
+@media only screen and (max-width: 768px) {
+  .hero .content .action .free-trial-wrap .free-trial {
+    width: 100%;
+  }
+}
+.hero .content .action .free-trial-wrap span {
+  font-size: 11px;
+  padding-left: 12px;
+  color: #706F6F;
+}
+@media only screen and (max-width: 768px) {
+  .hero .content .action .free-trial-wrap span {
+    font-size: 16px;
+  }
+}
+.hero .content .action .demo {
+  background: #1A1A1A;
+}
+@media only screen and (max-width: 768px) {
+  .hero .content .action .demo {
+    margin-top: 10px;
+  }
+}

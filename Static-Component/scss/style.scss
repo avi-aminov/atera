@@ -1,0 +1,223 @@
+// vars.scss
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap');
+@import 'mixin';
+@import 'vars';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0; 
+}
+
+.hero{
+    background-color: $bg-color;
+    position: relative;
+    margin-top: 65px;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 100%;
+        top: 150px;
+        left: 0;
+        background-image: url(../images/bg-images/small-left.png);
+        width: 61px;
+        height: 476px;
+
+        @include respond-to(md, min) {
+            background-image: url(../images/bg-images/large-left.png);
+            width: 180px;
+            height: 222px;
+            top: 45px;              
+        }
+
+        @include respond-to(lg, min) {
+            background-image: url(../images/bg-images/large-left.png);
+            width: 218px;
+            height: 270px;
+            top: 45px;             
+        }
+
+        @include respond-to(xl, min) {
+            background-image: url(../images/bg-images/xl-left.png);
+            width: 418px;
+            height: 283px;
+            top: 45px;             
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 100%;
+        right: 0;
+        top: 150px;
+        background-image: url(../images/bg-images/small-right.png);
+        width: 127px;
+        height: 467px;
+
+        @include respond-to(md, min) {
+            background-image: url(../images/bg-images/medium-right.png);
+            width: 134px;
+            height: 177px;
+            top: 45px;              
+        }
+
+        @include respond-to(lg, min) {
+            background-image: url(../images/bg-images/large-right.png);
+            width: 270px;
+            height: 235px;
+            top: 45px;             
+        }
+
+        @include respond-to(xl, min) {
+            background-image: url(../images/bg-images/xl-right.png);
+            width: 418px;
+            height: 283px;
+            top: 45px;             
+        }
+    }
+
+    .head {
+        position: relative;
+
+        &::before {
+            content: "";
+            background: $white;
+            position: absolute;
+            left: 0;
+            top: -60px;
+            width: 100%;
+            height: 105px;
+
+            @include respond-to(md, max) {
+                height: 210px;
+            }  
+        }
+
+        .badges {
+            width: 100%;
+            max-width: 880px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 38px;
+       
+            @include respond-to(lg, max) {
+                gap: 28px;
+            }
+
+            @include respond-to(md, max) {
+                max-width: 440px;
+            }
+
+            img {
+                width: 70px;
+                z-index: 1;
+            }
+        }
+    }
+
+    .content{
+        padding: 0 0 65px 0;
+        @include respond-to(md, max) {
+            padding: 0 0 110px 0;
+        }
+       
+        h1{
+            text-align: center;
+            font-size: 37px;
+            margin: 25px 0 0 0;
+            letter-spacing: 0.1px;
+            color: $dark;
+            font-weight: 600;
+
+            @include respond-to(md, max) {
+                max-width: 360px;
+                margin: auto;
+                padding-top: 32px;
+                font-size: 44px;
+            }
+        }
+
+        p{
+            text-align: center;
+            margin: 13px 0 0 0;
+            font-size: 14px;
+
+            @include respond-to(md, max) {
+                font-size: 20px;
+            }  
+        }
+
+        .action{
+            display: flex;
+            max-width: 300px;
+            gap: 5px;
+            margin: 30px auto 0 auto;
+
+            @include respond-to(md, max) {
+                flex-flow: column;
+                max-width: 360px;
+            }
+
+            .btn{
+                padding: 10px 29px;
+                border-radius: 8px;
+                border: 0;
+                color: $white;
+                max-height: 36px;
+                cursor: pointer;
+
+                @include respond-to(md, max) {
+                    font-size: 18px;
+                    max-height: 100%;
+                    padding: 16px 29px;
+                }
+
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+
+            .free-trial-wrap{
+                max-width: 50%;
+                @include respond-to(md, max) {
+                    max-width: 100%;
+                    text-align: center;
+                }
+
+                .free-trial{
+                    background: $pink;
+
+                    @include respond-to(md, max) {
+                        width: 100%; 
+                    }
+                }
+
+                span{
+                    font-size: 11px;
+                    padding-left: 12px;
+                    color: $gray;
+
+                    @include respond-to(md, max) {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .demo{
+                background: $dark;
+                @include respond-to(md, max) {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
